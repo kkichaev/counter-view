@@ -4,25 +4,60 @@
     <script src="src.js" type="module"></script>
 </head>
 <body>
-    <button class="set-control">HERE</button>
+    <button class="set-control" data-action="hide" data-ref="birthday_from">Когда родился нажать тут</button>
+
     <div class="container">
+        <div class="time-header">До пенсии осталось:</div>
         <div id="place" class="time-board">
     </div>
 
-    <div class="form-input">
-        <select id="year-control" name="select" class="combobox">
-        </select>
-        <select id="month-control" name="select" class="combobox">
-        </select>
-        <select id="day-control" name="select" class="combobox">
-        </select>
+    <div class="form-input" id="birthday_from" style="visibility: hidden;">
+        <div class="row">
+            <label for="year-control">Год</label>
+            <select id="year-control" name="select" class="combobox">
+            </select>
+
+            <label for="month-control">Месяц</label>
+            <select id="month-control" name="select" class="combobox">
+            </select>
+
+            <label for="day-control">День</label>
+            <select id="day-control" name="select" class="combobox">
+            </select>
+        </div>
+        <div>
+            <button data-action="save" data-ref="birthday_from">Запомнить меня</button>
+            <div class="checkbox-group" id="sex-group">
+                <label>
+                    <input id="man" type="checkbox" checked />
+                    Мужик
+                </label>
+                <label>
+                    <input id="woman" type="checkbox" />
+                    Баба
+                </label>
+            </div>
+        </div>
     </div>
 </div>
 
 <style>
+    .row {
+        display: flex;
+        margin-bottom: 15px;
+        gap: 20px;
+    }
+
     .combobox {
         min-width: 100px;
     }
+
+    .checkbox-group {
+        border: 1px solid black;
+        display: inline-block;
+        padding: 0 3px 0 4px;
+    }
+
     .form-input {
         padding: 10px;
         --def-width: 400px;
@@ -34,17 +69,24 @@
     }
     .set-control {
         position: absolute;
-        left: calc(100vw - 100px);
+        font-size: 22px;
+        left: calc(100vw - 300px);
     }
     .container {
         height: calc(100vh - 100px);
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
     }
-    .time-board {
+    .time-board, .time-header{
         font-size: 96px;
     }
+
+    .time-header {
+        color: darkgreen;
+    }
+
 </style>
 </body>
 </html>
