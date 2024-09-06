@@ -49,6 +49,17 @@ export function initBirthdayForm() {
         const day_control = document.getElementById('day-control')
         day_control.value = day
 
+        const man = localStorage.getItem('man')
+        const man_control = document.getElementById('man')
+        const woman_control = document.getElementById('woman')
+
+        if (man==='false') {
+            man_control.checked = false
+            woman_control.checked = true
+        } else {
+            man_control.checked = true
+            woman_control.checked = false
+        }
         window['start_calc']()
     } else {
         window['show']('birthday_from')

@@ -47,9 +47,10 @@ export function intiControls() {
         const day = localStorage.getItem('day')
         const date = new Date(`${year}-${month}-${day}`)
         const man = localStorage.getItem('man')
-        const man_range = 65;
-        const woman_range = 60;
-        const finish_year = date.getFullYear() + (man ? man_range : woman_range);
+        const man_range = 65
+        const woman_range = 60
+        const add_year = (man !== 'false' ? man_range : woman_range)
+        const finish_year = date.getFullYear() + add_year
         date.setFullYear(finish_year);
         const place = document.getElementById('place');
 
