@@ -1,0 +1,50 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="src.js" type="module"></script>
+</head>
+<body>
+    <button class="set-control">HERE</button>
+    <div class="container">
+        <div id="place" class="time-board">
+    </div>
+
+    <div class="form-input">
+        <select id="year-control" name="select" class="combobox">
+        </select>
+        <select id="month-control" name="select" class="combobox">
+        </select>
+        <select id="day-control" name="select" class="combobox">
+        </select>
+    </div>
+</div>
+
+<style>
+    .combobox {
+        min-width: 100px;
+    }
+    .form-input {
+        padding: 10px;
+        --def-width: 400px;
+        position: absolute;
+        left: calc(100vw / 2 - var(--def-width) / 2);
+        top: 100px;
+        border: 1px solid black;
+        min-width: var(--def-width);
+    }
+    .set-control {
+        position: absolute;
+        left: calc(100vw - 100px);
+    }
+    .container {
+        height: calc(100vh - 100px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .time-board {
+        font-size: 96px;
+    }
+</style>
+</body>
+</html>
