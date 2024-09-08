@@ -2,31 +2,58 @@
 <head>
     <meta charset="UTF-8">
     <script src="src.js" type="module"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Обратный отсчет до пенсии</title>
+    <meta name="description" content="Сколько дней осталось до пенсии как долго еще до пенсии когда пенсия сколько я еще проживу когда наступит пенсия">
+    <meta name="keywords" content="пенсия, количество дней, обратный отсчет, ждать">
+    <!-- Yandex.RTB -->
+    <script>window.yaContextCb=window.yaContextCb||[]</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(98271272, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/98271272" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
 <body>
     <button class="set-control" data-action="hide" data-ref="birthday_from">Когда родился нажать тут</button>
 
     <div class="container">
-        <div class="time-header">До пенсии осталось:</div>
+        <div class="time-header"><h1>До пенсии осталось:</h1></div>
         <div id="place" class="time-board">
     </div>
 
     <div class="form-input" id="birthday_from" style="visibility: hidden;">
+        <div class="row form-title">
+            <div>Дата производства</div>
+        </div>
         <div class="row">
             <label for="year-control">Год</label>
-            <select id="year-control" name="select" class="combobox">
+            <select id="year-control" name="select" class="form-control combobox">
             </select>
 
             <label for="month-control">Месяц</label>
-            <select id="month-control" name="select" class="combobox">
+            <select id="month-control" name="select" class="form-control combobox">
             </select>
 
             <label for="day-control">День</label>
-            <select id="day-control" name="select" class="combobox">
+            <select id="day-control" name="select" class="form-control combobox">
             </select>
         </div>
         <div>
-            <button data-action="save" data-ref="birthday_from">Запомнить меня</button>
+            <button class="form-control" data-action="save" data-ref="birthday_from">Запомнить меня</button>
             <div class="checkbox-group" id="sex-group">
                 <label>
                     <input id="man" type="checkbox" checked />
@@ -40,53 +67,26 @@
         </div>
     </div>
 </div>
+    <!-- Yandex.RTB R-A-11891021-1 -->
+    <script>
+        window.yaContextCb.push(() => {
+            Ya.Context.AdvManager.render({
+                "blockId": "R-A-11891021-1",
+                "type": "floorAd",
+                "platform": "desktop"
+            })
+        })
+    </script>
 
-<style>
-    .row {
-        display: flex;
-        margin-bottom: 15px;
-        gap: 20px;
-    }
-
-    .combobox {
-        min-width: 100px;
-    }
-
-    .checkbox-group {
-        border: 1px solid black;
-        display: inline-block;
-        padding: 0 3px 0 4px;
-    }
-
-    .form-input {
-        padding: 10px;
-        --def-width: 400px;
-        position: absolute;
-        left: calc(100vw / 2 - var(--def-width) / 2);
-        top: 100px;
-        border: 1px solid black;
-        min-width: var(--def-width);
-    }
-    .set-control {
-        position: absolute;
-        font-size: 22px;
-        left: calc(100vw - 300px);
-    }
-    .container {
-        height: calc(100vh - 100px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .time-board, .time-header{
-        font-size: 96px;
-    }
-
-    .time-header {
-        color: darkgreen;
-    }
-
-</style>
+    <!-- Yandex.RTB R-A-11891021-2 -->
+    <script>
+        window.yaContextCb.push(() => {
+            Ya.Context.AdvManager.render({
+                "blockId": "R-A-11891021-2",
+                "type": "floorAd",
+                "platform": "touch"
+            })
+        })
+    </script>
 </body>
 </html>

@@ -58,7 +58,7 @@ export function intiControls() {
         timer = setInterval(()=> {
             let rest = date.getTime() - Date.now();
             const th = new TimeHuman(rest)
-            place.innerHTML = ` ${th.days} дней, ${th.hours} часов ${th.minutes} минут ${th.sec}`
+            place.innerHTML = ` ${th.days} дней, ${th.hours} часов, ${th.minutes} минут, ${th.sec}`
         },1000)
     }
 
